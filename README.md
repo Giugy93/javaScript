@@ -1,4 +1,4 @@
-In questa sezione troveremo tutti gli esercizi di base +applicati in javascript.
+In questa sezione troveremo tutti gli esercizi di base applicati in javascript.
 
 Questi file sono relativi ai seguenti primi 24 video in: https://www.youtube.com/playlist?list=PLP5MAKLy8lP9FUx06-avV66mS8LXz7_Bb
 
