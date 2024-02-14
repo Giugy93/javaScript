@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 12) Eventi</title>
+
+    <style>
+        input{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Cosa sono gli eventi
+        2) Event handler button.onclik
+        3) Inline event handlers
+        4) AddEventListener() e RemoveEventListener()
+        5) Oggetto Event
+        6) e.preventDefault()
+        7) Event bubbling e capturing (stop propagation)
+        8) Event delegation (accennare)
+     -->
+
+    <form>
+        <div>
+            <label for="fname">Nome: </label>
+            <input id="fname" type="text">               <!-- onfocus="saluta();" -->
+        </div>
+        <div>
+            <label for="lname">Cognome: </label>
+            <input id="lname" type="text">
+        </div>
+        <div>
+            <input id="submit" type="submit">
+        </div>
+    </form>
+    <p></p>
+
+    <script>
+        const form = document.querySelector('form');
+        const nome = document.getElementById('fname');
+        const cognome = document.getElementById('lname');
+        const paragrafo = document.querySelector('p');
+
+        form.onsubmit = function (e){
+            if(nome.value === '' || cognome.value === ''){
+                e.preventDefault();
+                paragrafo.textContent='you need to fill in both names!';
+            }
+        }
+
+        /*
+        nome.addEventListener('focus', function (e) {     //event (e)
+            console.log(e); 
+            console.log(e.target);                        //L'oggetto Event
+            console.log(e.target.value);                  //L'oggetto Event con valore
+        })
+
+        nome.onfocus = function(){
+            console.log('sono in focus');
+        }
+
+        nome.addEventListener('focus', ()=> {
+            console.log('sono in focus dal listener');
+        })
+
+        function saluta(){
+            console.log('ciao Luca');
+        }
+
+        nome.onclick = function(){
+            console.log('ciao');
+        }
+        */
+
+    </script>
+</body>
+
+</html>

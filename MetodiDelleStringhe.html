@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 05) Metodi utili per le Stringhe</title>
+
+</head>
+
+<body>
+    <!--
+        1) Una stringa è un oggetto
+        2) Lunghezza di una stringa
+        3) Prendere un carattere specifico
+        4) Prendere una parte di stringa: indexOf slice
+        5) Cambiare il Case di una stringa toUpperCase toLowerCase
+        6) Cambiare parti di una stringa replace
+    -->
+    <script>
+        let stringa = "Questo è un corso di javascript completo e aggiornato";
+        let posizione = stringa.indexOf("javascript");
+        console.log(stringa.length); //num lunghezza stringa
+        console.log(stringa[7]); //posizione della strinza/lettera
+        console.log(stringa[stringa.length - 1]); //l'ultima lettera che comprende tutta la stringa
+        console.log(stringa.indexOf("javascript")); //fa riferimento la posizione iniziale di una parola
+        console.log(stringa.slice(posizione)); //inizia dalla posizione desiderata
+        console.log(stringa.toUpperCase()); //tutta la stringa sarà maiuscola
+        console.log(stringa.replace("Questo è un", "Il"));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 06) Array</title>
+
+</head>
+
+<body>
+    <!--
+        1) Cos'è un array
+        2) Creare un array 
+        3) Accadere e modificare dati in un array
+        4) Lunghezza di un array e come passare in rassegna tutti gli elementi
+        5) Convertire stringhe e array split() join()
+        6) Aggiungere e rimuovere elementi unshift() shift() [|] push() pop()
+    -->
+    <script>
+
+        
+        let citta = "Milano, Torino, Roma, Venezia, Napoli";
+        let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli"];
+        
+        console.log(data[0], data[1], "ecc..");
+
+        /*
+        for(i=0; i<data.length; i++){
+            console.log(data[i]);
+        }
+        */
+
+        /*
+        let citta = "Milano, Torino, Roma, Venezia, Napoli";
+        let data = citta.split(","); //separatore: stringa ad array
+        console.log(data); 
+        */
+
+        /*
+        let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli"];
+        let citta = data.join('/'); // separatore: array ad stringa
+        console.log(citta);
+        */
+
+        /*
+        let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli"];
+        data.push("Firenze"); //aggiunge un elemento all'array verso la fine
+        console.log(data);
+        */
+
+        /*
+        let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli"];
+        data.pop(); //elimina l'ultimo elemento dell'array
+        console.log(data);
+        */
+        
+        /*
+        let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli"];
+        data.unshift("Firenze"); //Inserisce l'elemento dell'array all'inizio
+        console.log(data);
+        */
+        
+        /*
+        let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli"];
+        data.shift(); //toglie un elemento dell'array all'inizio
+        console.log(data);
+        */
+        
+
+    </script>
+</body>
+
+</html>

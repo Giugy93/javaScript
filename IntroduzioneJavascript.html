@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 01) Introduzione a Javascript</title>
+
+    <script src="#" defer></script>
+    <script src="#" defer></script>
+    <script src="#" async></script>
+
+    <style>
+        p {
+            font-family: 'helvetica neue', helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgba(0, 0, 200, 0.6);
+            background: rgba(0, 0, 200, 0.3);
+            color: rgba(0, 0, 200, 0.6);
+            box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        1) Cos'è Javascript - html css js
+        2) Cosa può fare JS: variabili, operazioni, eventi e tanto altro. API (3 parti, browser)
+        3) Cosa fa JS sulla nostra pagina
+        4) Browser security (ogni codice è eseguito solo nella propria tab)
+        5) Ordine di lettura codice (dall'alto verso il basso)
+        6) Codice interpretato vs codice compilato (js interpretato dal browser subito, C/C++ compilati in lingua)
+        7) Differenza tra server side e client side
+        8) Codice dinamico vs statico
+        9) Come aggiungere JS alla pagina: interno, esterno e inline
+        10) Stringhe di caricamento codice, DOMContentLoaded, async (indipendente), defer (in ordine)
+        11) Commenti: // /* */
+    -->
+
+    <!--
+    <p onclick="ciao()">Player 1: Chris</p>
+
+    <script>
+        const paragraph = document.querySelector('p');
+
+        //paragraph.addEventListener('click', updateName);
+
+        function updateName() {
+            let name = prompt('Enter a new name');
+            paragraph.textContent = 'Player 1: ' + name;
+        }
+
+        function ciao() {
+            alert('Ciao');
+            //BOTTONE
+        }
+    </script>
+
+    <script src="filejs.js"></script>
+    -->
+
+    <p>Player 1: Chris</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paragraph = document.querySelector('p');
+
+            paragraph.addEventListener('click', updateName);
+
+            function updateName() {
+                let name = prompt('Enter a new name');
+                paragraph.textContent = 'Player 1: ' + name;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

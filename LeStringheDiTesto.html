@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 04) Le stringhe di testo</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Creare una stringa
+        2) Singoli apici (quotes) vs doppi apici
+        3) Fare l'escape dei caratteri in una stringa 
+        4) Concatenare delle stringhe
+        5) Numeri vs stringhe
+        6) Template literals ``
+     -->
+    <script>
+
+        let nome = "Marco";
+        let testo = "Ciao sono " + nome;
+        console.log(testo);
+
+        let numero = 56;
+        let persona = Number("56") + 56;
+        let persona2 = Number("56") + numero.toString();
+        console.log(persona);
+        console.log(persona2);
+
+        let caratteri = "ciao sono una variabile";
+        let elemento = `<h1>${caratteri} bellissima<h1>`;
+
+        document.body.innerHTML = elemento;
+
+    </script>
+</body>
+
+</html>

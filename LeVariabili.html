@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 02) Le variabili</title>
+
+</head>
+
+<body>
+    <!--
+        1) Che cos'è una variabile
+        2) Dichiarazione di una varibile (regole nome varibile)
+        3) Inizializzare una variabile 
+        4) Differenza tra var e let
+        5) Aggiornare la variabile
+        6) Tipi di variabili: numeri, stringhe, booleani, array* e oggetti*
+        7) Tipizzazione dinamica
+        8) Costanti in Javascrip
+    -->
+    <script>
+
+        let nomeUtente; //Dichiarazione
+        nomeUtente = 'Marco'; //Inizializzata
+        console.log(typeof nomeUtente);
+
+
+        let persona = {
+            nome: 'BoB',
+            cognome: 'BoB',
+            codiceFiscale: '43554fesfsfeawe',
+            cittaNascita: 'Torino',
+            eta: 22,
+            colorePreferito: ['giallo', 'rosso', 'verde']
+        };
+        console.log(persona.colorePreferito[2]);
+
+        const Utente = 'Luca'; //costante
+        console.log(Utente);
+
+    </script>
+</body>
+
+</html>

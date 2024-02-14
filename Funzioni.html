@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 09) Funzioni</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Blocchi di codici riutilizzabili
+        2) Funzioni del browser string.replace, array.join, math.random
+        3) Funzioni e metodi 
+        4) Invocare una funzione
+        5) Funzioni anonime
+        6) Scope e conflitti {scope globale e scope locale}
+        7) Innerstare funzioni
+        8) Parametri delle funzioni
+     -->
+
+    <script>
+        let nome = "Luca";
+        
+        function ciao(){
+            let cognome = "Rossi";
+            console.log("ciao: ", cognome);
+            hello(cognome);
+        }
+        //ciao();
+
+        function hello(name){
+            console.log("hello: ", name);
+        }
+        //hello(nome);
+
+        ciao();
+
+    </script>
+</body>
+
+</html>

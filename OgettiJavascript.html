@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 13) Gli Oggetti in Javascript</title>
+
+    <style>
+        input {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Cos'è un oggetto, proprietà, metodi
+        2) Cercare un oggetto, leggere proprietà
+        3) Dot notation e bracket notation
+        4) Aggiornare un oggetto
+        5) La parola chiave this
+     -->
+    <script>
+        const chiave = 'genere';
+
+        const persona = {
+            //proprietà
+            nome: 'Luca',      //chaive key: oggetto "..."
+            cognome: 'Rossi',
+            genere: 'Maschio',
+            eta: 25,
+            interessi: ['snowboard', 'bascket', 'picnic al parco'],
+            indirizzo: {
+                via: 'piazza Roma',
+                cap: '09872',
+                provincia: 'MI',
+                citta: 'Milano'
+            },
+            saluta: function(){                        // metodo
+                console.log(`Ciao sono ${this.nome}`); // this prende il contesto
+            }
+        }
+    
+        persona.saluta();
+
+        // persona.nome = 'Paolo';                   Le proprietà dei valori possono essere modificate
+        // persona.colorePreferito = 'Rosso';        Aggiunge una proprietà
+        
+        // console.log(persona.genere);              Dot notation
+        // console.log(persona[chiave]);             Bracket notation
+        
+    </script>
+</body>
+
+</html>

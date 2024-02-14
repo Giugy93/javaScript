@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 16) Json</title>
+
+    <style>
+    
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Cos'è JSON
+        2) Struttura
+        3) Arra come json
+        4) Note: json è una stringa dati con solo proprietà no metodi
+        5) Note: le stringhe sono necessariamente contenute in bouble quotes ""
+        6) Note: a differenza degli oggetti js le proprietà vanno contenute in ""
+        7) Note: json può contenere: array, obj, string, number, boolean
+        8) Otteniamo un json
+     -->
+    <script>
+        //Aprire con tasto destro il browser con Live Server
+        let requestURL = './classe.json';
+        let request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+
+        request.onload = function(){
+            const classe = request.response;
+            console.log(classe);
+        }
+
+    </script>
+</body>
+
+</html>

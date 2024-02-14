@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 15) Classi e Ereditarietà in Javascript</title>
+
+    <style>
+        input {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Nota: saltare i prototipi
+        2) Definire il costruttore di una classe figlia
+        3) Come ereditare da un costruttore senza parametri
+        4) sovrascriviamo un metodo
+        5) EcmaScript 2015 Classi
+        6) Ereditarietà nelle classi
+        7) Getters and Setters
+     -->
+    <script>
+
+    /*   
+        function Persona (nome, cognome, eta, genere, interessi) {
+            this.nome = nome;     //chaive key: oggetto "..."
+            this.cognome = cognome;
+            this.eta = eta;
+            this.genere = genere;
+            this.interessi = interessi;
+            this.saluta = function(){                       
+                console.log(`Ciao sono ${this.nome}`); 
+            };
+        };
+        
+        function Insegnante (nome, cognome, eta, genere, interessi, materia) {
+            Persona.call(this, nome, cognome, eta, genere, interessi);
+
+            this.materia = materia;
+            this.saluta = function(){
+                console.log(`Buongiorno sono ${this.nome} ${this.cognome}`); 
+            };
+
+        };
+
+        const ingnante = new Insegnante('Anna', 'Blu', 32, 'Femmina', ['Netflix', ' Storia']);
+        console.log(ingnante);
+        ingnante.saluta();
+    */
+
+        //  ------------------------------------------------------------------------------------------
+
+        class Persona {
+            constructor(nome, cognome, eta, genere, interessi) {
+                this.nome = nome;     
+                this.cognome = cognome;
+                this.eta = eta;
+                this.genere = genere;
+                this.interessi = interessi;        
+            }
+
+            saluta(){
+                console.log(`Ciao sono ${this.nome}`); 
+            };
+        };
+
+        class Insegnante extends Persona{
+            constructor(nome, cognome, eta, genere, interessi, materia){
+                super(nome, cognome, eta, genere, interessi);
+
+                this.materia = materia;
+            }
+
+            get materia(){
+                return this._materia;
+            }
+
+            set materia(nuovaMateria){
+                this._materia = nuovaMateria;
+            }
+
+            riprendiAlunno(nomeAlunno){
+                console.log(`${nomeAlunno} non si mangia in classe!`);
+            }
+        }
+
+        const insegnante = new Insegnante('Anna', 'Blu', 32, 'Femmina', ['Netflix'], 'Storia');
+        //insegnante.riprendiAlunno('Edoardo');
+        console.log(insegnante.materia);
+        insegnante.materia = 'Matematica';
+        console.log(insegnante.materia);
+
+
+    </script>
+</body>
+
+</html>

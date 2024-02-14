@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 17) Concetti Generali Asincrono</title>
+
+    <style>
+    
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Introduzione all'asyncrono
+        2) Blocking code: concetto del Thread (processo)
+        3) Treads, js single thread - main thread, worker threads (quando si pigia più volte un bottone)
+        4) Codice Asyncrono
+     -->
+
+    <button id="date">Vai</button>
+    <button id="alert">Alert</button>
+    
+    <script>
+        const btn = document.querySelector('#date');
+        const btnAlert = document.querySelector('#alert');
+        btn.addEventListener('click', () => {
+            let myDate;
+            for(let i=0; i< 10000000; i++){
+                let date = new Date();
+                myDate = date;
+            }
+
+            console.log(myDate);
+
+            let pElem = document.createElement('p');
+            pElem.textContent = 'This is a mewly-added paragraph.';
+            document.body.appendChild(pElem);
+        });
+
+        btnAlert.addEventListener('click', () =>{
+            alert('Eccomi!');
+            console.log('Eccomi!');
+        });
+
+    </script>
+</body>
+
+</html>

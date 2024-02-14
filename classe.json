@@ -1,0 +1,42 @@
+{
+    "nome": "4A",
+    "numeroAlunni": 21,
+    "scuolaSabato": false,
+    "scuola": "Scuola Elementare",
+    "insegnanti": [
+        {
+            "nome": "Anna",
+            "cognome": "Blu",
+            "materiaInsegnante": ["Storia", "Italiano", "Geografia"]
+        },
+
+        {
+            "nome": "Ludovica",
+            "cognome": "Rossi",
+            "materiaInsegnante": ["Matematica", "Geografia"]
+        }
+    ],
+
+    "Alunni": [
+        {
+            "nome": "Marco",
+            "cognome": "gialli"
+        },
+
+        {
+            "nome": "Mario",
+            "cognome": "Verdi"
+        },
+
+        {
+            "nome": "Maria",
+            "cognome": "Arancioni"
+        }
+    ],
+
+    "orari": {
+        "mattina": ["storia","matematica"],
+        "pomeriggio": ["italiano","geografia"]
+    }
+    
+} 

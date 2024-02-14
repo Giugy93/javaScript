@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 18) Introduzione Patrica Asincrono</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) JS sync
+        2) JS async
+        3) Async callbacks
+        4) Promises (fetch)
+     -->
+
+    <button>Vai</button>
+
+    <script>
+        //sincronizzazione di vecchia generazione
+        function loadAsset(url, type, callback) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.responseType = type;
+
+            xhr.onload = function () {
+                callback(xhr.response);
+            };
+
+            xhr.send();
+        };
+
+        function displayImage(blob) {
+            let objectURL = URL.createObjectURL(blob);
+
+            let image = document.createElement('img');
+            image.src = objectURL;
+            document.body.appendChild(image);
+        };
+
+        loadAsset('https://ak.picdn.net/shutterstock/videos/11773709/thumb/10.jpg', 'blob', displayImage);
+
+        //sincronizzazione di ultima generazione (Apreire il browser con Live Server)
+        fetch('classe.json').then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            classe = json;
+            console.log('Dati: ', classe);
+        }).catch(function (err) {
+            console.log('Fetch problem: ' + err.massage);
+        });
+
+    </script>
+</body>
+
+</html>

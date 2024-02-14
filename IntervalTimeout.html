@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 19) Interval and Timeout</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) setTimeout(funzione, tempo d attesa) e clearTimeout()
+        2) setInterval() e clearInterval()
+     -->
+
+    <button>Vai</button>
+    <p id="demo"></p>
+
+    <script>
+        
+        //let prova = setTimeout(saluta, 5000);
+        const btn = document.querySelector('button');
+
+        /*
+        function saluta(){
+            alert('ciao sono in timeout');
+        }
+        */
+
+        // al bottone tende a bloccare la data
+        btn.addEventListener('click', ()=> { 
+            clearInterval(createClock);
+        }) 
+
+        function displayTime() {
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            document.getElementById('demo').textContent = time;
+        } 
+
+        const createClock = setInterval(displayTime, 1000);
+
+    </script>
+</body>
+
+</html>

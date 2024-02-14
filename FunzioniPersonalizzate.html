@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 10) Funzioni Custom</title>
+
+    <style>
+        input{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        button{
+            padding: 20px;
+            background-color: rgb(34, 34, 34);
+            color: white;
+            border: 5px solid rgb(12, 12, 12);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Creare una funzione basica
+        2) Usarla nel codice
+        3) Aggiungere parametri
+        4) Parametri di default
+     -->
+    <input type="text" name="nome" placeholder="nome persona">
+    <button>Saluta!</button>
+    <h1>Nessun Saluto</h1>
+
+    <script>
+        let button = document.querySelector('button');
+        let title = document.querySelector('h1');
+        let nome = document.querySelector('input');
+
+        function saluta(name = 'Marco'){               //inserisce un nome di default saluta(name = "Marco")
+            title.innerHTML = `Ciao ${name}`;
+        }
+
+        button.addEventListener('click', ()=>{
+            saluta(nome.value);
+            //console.log(nome.value);
+        });
+
+        const myButton = document.querySelector('button');
+
+        myButton.onclick = function(){
+            alert('hello');
+        }
+       
+
+
+    </script>
+</body>
+
+</html>

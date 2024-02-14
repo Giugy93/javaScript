@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, inirial-scale=1.0">
+
+    <title> 11) Return dei valori dalle Funzioni</title>
+
+    <style>
+        input{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        button{
+            padding: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+        1) Creare una funzione basica
+        2) Usarla nel codice
+        3) Aggiungere parametri
+        4) Parametri di default
+     -->
+    <input type="text" name="numero" placeholder="Inserisci un numero">
+    <button>Calcola cubo!</button>
+    <h1>-</h1>
+
+    <script>
+        let button = document.querySelector('button');
+        let title = document.querySelector('h1');
+        let numero = document.querySelector('input');
+
+        function cubo(number){               
+            let result = number * number * number;
+            console.log("Il risultato è: ", result);
+            return result;
+        }     
+
+        button.addEventListener("click", ()=>{
+            title.innerHTML= cubo(numero.value);
+        });
+
+    </script>
+</body>
+
+</html>
